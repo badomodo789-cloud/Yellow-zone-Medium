@@ -7,3 +7,11 @@
 .price-list .hot h3{color:#174b78}.price-list .hot p{color:#71859a}.price-list .hot strong{color:#b88916}
 .price-list label{background:#f4c94a;color:#174b78}
 .btn.dark{background:#174b78}.btn.dark:hover{background:#23689e}
+
+/* V5: true edge-to-edge layout */
+html,body{width:100%;max-width:none;margin:0;padding:0}
+body,main,.nav,main>section,footer{max-width:none;width:100%;margin-left:0;margin-right:0}
+main{display:block;width:100%}
+.nav{width:100vw;max-width:none}
+main>section{width:100vw;max-width:none}
+footer{width:100vw;max-width:none}
