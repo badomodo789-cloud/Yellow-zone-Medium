@@ -35,3 +35,55 @@ main > section { display:block; }
   html, body { width:100vw !important; min-width:100vw !important; }
   header.nav, main, main > section, footer { width:100vw !important; min-width:100vw !important; margin-left:0 !important; margin-right:0 !important; }
 }
+
+/* V8: eliminate any page-shell side gutter and force true viewport width */
+html,body{
+  margin:0 !important;
+  padding:0 !important;
+  width:100% !important;
+  min-width:100% !important;
+  max-width:none !important;
+  overflow-x:hidden !important;
+}
+body{
+  position:static !important;
+}
+header.nav, main, main > section, footer{
+  display:block !important;
+  width:100% !important;
+  min-width:0 !important;
+  max-width:none !important;
+  margin:0 !important;
+  padding-left:0;
+  padding-right:0;
+  position:relative !important;
+  left:0 !important;
+  right:0 !important;
+  transform:none !important;
+}
+header.nav{
+  min-height:76px;
+  padding-left:5% !important;
+  padding-right:5% !important;
+}
+.hero,.about,.prices,.birthday,.schools,.gallery,.booking,.location{
+  width:100% !important;
+  max-width:none !important;
+  margin:0 !important;
+}
+@media(max-width:720px){
+  header.nav{padding-left:4% !important;padding-right:4% !important}
+}
+
+.hours{margin-top:14px;display:grid;gap:4px;color:rgba(255,255,255,.78);font-size:14px}.hours strong{color:#ffd12f;font-weight:900}
+
+
+/* Dynamic content controlled from Yellow Zone Admin. Existing layout remains unchanged. */
+#generalDynamicPrices,#birthdayDynamicPrices,#subscriptionDynamic{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px;width:100%}
+#generalDynamicPrices article,#birthdayDynamicPrices article,#subscriptionDynamic article{padding:22px;border-radius:22px;background:rgba(255,255,255,.92);box-shadow:0 12px 30px rgba(16,55,91,.08);border:1px solid rgba(16,55,91,.08)}
+#generalDynamicPrices article strong,#birthdayDynamicPrices article strong,#subscriptionDynamic article strong{display:block;font-size:30px;margin:8px 0;color:#123b61}
+#generalDynamicPrices article button,#birthdayDynamicPrices article button,#subscriptionDynamic article button{border:0;border-radius:12px;padding:10px 16px;background:#123b61;color:#fff;font-weight:700;cursor:pointer}
+#subscriptionDynamic{margin-top:18px}
+#dynamicAds{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.yz-ad-card{overflow:hidden;border-radius:24px;background:#fff;box-shadow:0 14px 34px rgba(16,55,91,.09);border:1px solid rgba(16,55,91,.08)}
+.yz-ad-card img{width:100%;height:210px;object-fit:cover;display:block}.yz-ad-card>div{padding:20px}.yz-ad-card h3{margin:6px 0}.yz-ad-card strong{display:block;margin:8px 0 12px;font-size:24px}.yz-ad-card button{border:0;border-radius:12px;padding:10px 16px;background:#f4c62b;color:#123b61;font-weight:800;cursor:pointer}.dynamic-empty{padding:24px;text-align:center;opacity:.7}
